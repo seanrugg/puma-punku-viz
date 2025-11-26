@@ -1,0 +1,26 @@
+classDiagram
+    class GreatPlatform {
+        +Base: Clay and Cobble
+        +Facing: Red Sandstone Slabs
+        +Volume: 16,000 cubic meters
+    }
+
+    class Slab1 {
+        +Weight: 131 Tons
+        +Material: Red Sandstone
+    }
+    
+    class Slab2 {
+        +Weight: 85 Tons
+        +Material: Red Sandstone
+    }
+
+    class ExpansionJoint {
+        +Material: Andesite Ashlar
+        +Function: Seismic Buffer
+    }
+
+    GreatPlatform *-- Slab1 : Main Retaining Wall
+    GreatPlatform *-- Slab2 : Main Retaining Wall
+    Slab1 -- ExpansionJoint : Connected via
+    ExpansionJoint -- Slab2 : Connected via
