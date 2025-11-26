@@ -1,0 +1,29 @@
+graph TB
+    %% Layout Definitions
+    Entrance[("West Entrance <br/>(The Staircase/Ramp)")]
+    
+    subgraph The_Platform ["The Great Platform (Terraced)"]
+        direction TB
+        WestGate[("The West Gate <br/>(Megalithic Andesite Arch)")]
+        Courtyard[("Sunken Interior Courtyard")]
+        Sidewalks["Paved Andesite Walkways"]
+    end
+    
+    subgraph The_Sanctuary ["The East Sanctuary"]
+        E_Gate1["Gateway of the Sun Style Portal"]
+        E_Gate2["Gateway of the Moon Style Portal"]
+        Walls["H-Block Friezes (Decorated Walls)"]
+    end
+    
+    %% Connections
+    Entrance ==> WestGate
+    WestGate ==> Courtyard
+    Courtyard --> Sidewalks
+    Sidewalks --> Walls
+    Courtyard ==> E_Gate1
+    Courtyard ==> E_Gate2
+    
+    %% Styling
+    style Entrance fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style WestGate fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Walls fill:#e0e0e0,stroke:#616161,stroke-width:2px
