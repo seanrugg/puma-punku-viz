@@ -1,0 +1,22 @@
+puma-punku-viz/
+├── public/
+│   ├── assets/
+│   │   ├── models/           # GLB files (e.g., H-Block.glb, Gate_West.glb)
+│   │   ├── textures/         # 2k textures for Red Sandstone and Andesite
+│   │   └── data/
+│   │       └── vranich_matrix.json  # Your measurement data & coordinates
+├── src/
+│   ├── components/
+│   │   ├── World/
+│   │   │   ├── Platform.jsx       # The terraced mound
+│   │   │   ├── HBlockWall.jsx     # Procedural generation of the wall
+│   │   │   └── GateComplex.jsx    # The detailed gateways
+│   │   ├── UI/
+│   │   │   ├── Overlay.jsx        # Instructions & History
+│   │   │   └── ToggleSwitch.jsx   # "Ruins" vs "Reconstructed" toggle
+│   │   └── Controls/
+│   │       └── FirstPerson.jsx    # WASD + Mouse look controls
+│   ├── lib/
+│   │   └── stoneGenerator.js      # Logic to spawn blocks based on measurements
+│   └── App.jsx
+└── README.md
