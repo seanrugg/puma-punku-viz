@@ -1,0 +1,38 @@
+graph TD
+    User((User))
+    
+    subgraph UI_Layer ["Interface Layer (React)"]
+        Nav[Navigation Controls]
+        Toggle[Time Period Toggle]
+        Info[Info Panel]
+    end
+    
+    subgraph Logic_Layer ["Logic Layer"]
+        State{Current State}
+        Loader[Asset Loader]
+        Physics[Physics Engine]
+    end
+    
+    subgraph Render_Layer ["3D Render Layer (Three.js)"]
+        Scene[Scene Graph]
+        Lights[Lighting & Atmosphere]
+        
+        subgraph Geometry
+            Platform[Terraced Platform]
+            Ruins[Scattered Ruins]
+            Recon[Reconstructed Temple]
+        end
+    end
+
+    User --> Nav
+    User --> Toggle
+    
+    Toggle -->|Switch Mode| State
+    State -- "Mode: Ruins" --> Ruins
+    State -- "Mode: Reconstructed" --> Recon
+    
+    Nav -->|Update Camera| Scene
+    
+    Loader -->|Inject GLB Assets| Geometry
+    
+    Scene -->|Render Frame| User
