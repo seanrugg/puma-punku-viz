@@ -1,0 +1,151 @@
+{
+  "site_metadata": {
+    "name": "Puma Punku Reconstruction",
+    "model_version": "Vranich_2.1",
+    "units": "meters",
+    "coordinate_system": "Y-Up (Right Handed)",
+    "total_elements": 18
+  },
+  "blocks": [
+    {
+      "id": "SLAB_001",
+      "type": "platform_slab",
+      "model_src": "slab_type_a.glb",
+      "category": "foundation",
+      "position": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 7.8, "y": 1.0, "z": 5.2 },
+      "properties": {
+        "material": "Red Sandstone",
+        "weight_est": "131 tons",
+        "note": "The primary foundation slab. Likely quarried near Lake Titicaca, 10km away."
+      }
+    },
+    {
+      "id": "SLAB_002",
+      "type": "platform_slab",
+      "model_src": "slab_type_b.glb",
+      "category": "foundation",
+      "position": { "x": 8.0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 6.5, "y": 1.0, "z": 5.2 },
+      "properties": {
+        "material": "Red Sandstone",
+        "weight_est": "85 tons",
+        "note": "Secondary slab connected via copper cramps."
+      }
+    },
+    {
+      "id": "SLAB_003",
+      "type": "platform_slab",
+      "model_src": "slab_type_b.glb",
+      "category": "foundation",
+      "position": { "x": -8.0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 6.5, "y": 1.0, "z": 5.2 },
+      "properties": {
+        "material": "Red Sandstone",
+        "weight_est": "85 tons",
+        "note": "Secondary slab connected via copper cramps."
+      }
+    },
+    {
+      "id": "GATE_WEST",
+      "type": "megalithic_gate",
+      "model_src": "gate_monolith.glb",
+      "category": "superstructure",
+      "position": { "x": 0, "y": 1.0, "z": -2.0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+      "properties": {
+        "material": "Andesite",
+        "weight_est": "14 tons",
+        "note": "The main processional entrance. Carved from a single block of andesite."
+      }
+    },
+    {
+      "id": "H_BLOCK_01",
+      "type": "h_block_standard",
+      "model_src": "h_block.glb",
+      "category": "wall_assembly",
+      "position": { "x": -4.0, "y": 1.0, "z": 2.0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+      "properties": {
+        "material": "Andesite",
+        "weight_est": "1.2 tons",
+        "note": "Standard modular unit. Notice the dovetail interfaces."
+      }
+    },
+    {
+      "id": "H_BLOCK_02",
+      "type": "h_block_standard",
+      "model_src": "h_block.glb",
+      "category": "wall_assembly",
+      "position": { "x": -2.9, "y": 1.0, "z": 2.0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+      "properties": {
+        "material": "Andesite",
+        "weight_est": "1.2 tons",
+        "note": "Interlocked with H_BLOCK_01."
+      }
+    },
+    {
+      "id": "H_BLOCK_03",
+      "type": "h_block_standard",
+      "model_src": "h_block.glb",
+      "category": "wall_assembly",
+      "position": { "x": -1.8, "y": 1.0, "z": 2.0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+      "properties": {
+        "material": "Andesite",
+        "weight_est": "1.2 tons",
+        "note": "Interlocked with H_BLOCK_02."
+      }
+    },
+    {
+      "id": "H_BLOCK_04",
+      "type": "h_block_standard",
+      "model_src": "h_block.glb",
+      "category": "wall_assembly",
+      "position": { "x": 1.8, "y": 1.0, "z": 2.0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+      "properties": {
+        "material": "Andesite",
+        "weight_est": "1.2 tons",
+        "note": "Mirrored wall segment."
+      }
+    },
+    {
+      "id": "H_BLOCK_05",
+      "type": "h_block_standard",
+      "model_src": "h_block.glb",
+      "category": "wall_assembly",
+      "position": { "x": 2.9, "y": 1.0, "z": 2.0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+      "properties": {
+        "material": "Andesite",
+        "weight_est": "1.2 tons",
+        "note": "Mirrored wall segment."
+      }
+    },
+    {
+      "id": "H_BLOCK_06",
+      "type": "h_block_standard",
+      "model_src": "h_block.glb",
+      "category": "wall_assembly",
+      "position": { "x": 4.0, "y": 1.0, "z": 2.0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+      "properties": {
+        "material": "Andesite",
+        "weight_est": "1.2 tons",
+        "note": "Mirrored wall segment."
+      }
+    }
+  ]
+}
