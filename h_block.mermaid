@@ -1,0 +1,24 @@
+graph TD
+    subgraph Modular_Assembly_Logic ["Modular Assembly Logic"]
+    style Modular_Assembly_Logic fill:#f9f9f9,stroke:#333,stroke-width:2px
+    
+        H1[("H-Block Type A <br/>(Andesite)")] 
+        H2[("H-Block Type A <br/>(Andesite)")]
+        
+        Clamp{{"I-Shaped Metal Cramp <br/>(Copper-Arsenic)"}}
+        
+        Socket1(Recessed Clamp Socket)
+        Socket2(Recessed Clamp Socket)
+        
+        Backing[("Backing Stones <br/>(Sandstone/Rubblestone)")]
+        
+        H1 -- "Precision Cut Surface" --> Socket1
+        H2 -- "Precision Cut Surface" --> Socket2
+        
+        Socket1 -. "Poured Molten Metal" .- Clamp
+        Socket2 -. "Poured Molten Metal" .- Clamp
+        
+        Clamp ==>|Tensile Strength| Joint[Interlocked Wall Segment]
+        
+        Joint -- "Support" --> Backing
+    end
