@@ -62,7 +62,8 @@ export default function App() {
       <InfoPanel block={selected} onClose={() => setSelected(null)} />
 
       {/* Onboarding */}
-      <OnboardingOverlay visible={showOnboarding} onClose={() => setShowOnboarding(false)} />
+      {/* Shown only after load, so the spinner (z-50) can't swallow the first click */}
+      <OnboardingOverlay visible={showOnboarding && !loading} onClose={() => setShowOnboarding(false)} />
 
       {/* Loading spinner */}
       {loading && (

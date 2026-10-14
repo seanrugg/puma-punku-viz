@@ -20,13 +20,15 @@ function seededRand(seed) {
  * Ruins: scattered, toppled positions derived deterministically from block ID.
  */
 export function getTransform(block, mode) {
-  const { position, rotation, scale } = block
+  const { position, rotation } = block
+  // three.js/R3F needs [x, y, z] arrays; a plain {x,y,z} object becomes a NaN scale (invisible mesh)
+  const scale = [block.scale.x, block.scale.y, block.scale.z]
 
   if (mode === 'reconstructed') {
     return {
       position: [position.x, position.y, position.z],
       rotation: [rotation.x, rotation.y, rotation.z],
-      scale:    [scale.x,    scale.y,    scale.z]
+      scale
     }
   }
 
@@ -64,7 +66,7 @@ export function getTransform(block, mode) {
       return {
         position: [position.x, position.y, position.z],
         rotation: [rotation.x, rotation.y, rotation.z],
-        scale: [scale.x, scale.y, scale.z]
+        scale
       }
   }
 }
